@@ -194,22 +194,6 @@ nav a:hover::after {
     justify-content: space-between;
     font-size: 0.9rem;
 }
-
-/* Mobile */
-@media (max-width: 768px) {
-    .hero-modern h1 {
-        font-size: 2.2rem;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 .product-modern {
     padding: 100px 0;
 }
@@ -299,11 +283,35 @@ nav a:hover::after {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .hero-modern h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .product-grid {
         grid-template-columns: 1fr;
     }
 
     .product-info-modern h1 {
         font-size: 2rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 1rem;
     }
 }
