@@ -58,8 +58,6 @@ body {
     color: #e2d84a;
 }
 
-
-
 nav a {
     margin-left: 25px;
     text-decoration: none;
@@ -80,35 +78,35 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
-/* Hero */
-.hero-modern {
-    background: linear-gradient(
-        rgba(47,107,47,0.85),
-        rgba(47,107,47,0.85)
-    ),
-    url("hooi-achtergrond.jpg");
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.split-image {
+    background-image: url("hooi-achtergrond.jpg");
     background-size: cover;
     background-position: center;
-    color: white;
-    padding: 120px 0;
 }
 
-.hero-content {
-    max-width: 600px;
+.split-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e2e1e1;
 }
 
-.hero-modern h1 {
-    font-size: 3rem;
+.split-content h2 {
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
 
-.hero-modern h1 span {
-    font-weight: 300;
-}
-
-.hero-modern p {
-    font-size: 1.1rem;
+.split-content p {
+    font-size: 1.05rem;
     margin-bottom: 30px;
+    color: #374151;
 }
 
 /* Buttons */
@@ -130,7 +128,7 @@ nav a:hover::after {
 /* USP Section */
 .usp-section {
     padding: 80px 0;
-    background: #f9fafb;
+    background: #c3c2c2;
 }
 
 .usp-grid {
@@ -283,23 +281,27 @@ nav a:hover::after {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hero-modern h1 {
-        font-size: 2.2rem;
-    }
-
-    .about-layout {
+    .split-section {
         grid-template-columns: 1fr;
     }
 
+    .split-image {
+        min-height: 250px;
+    }
+
+    .split-content {
+        padding: 40px 25px;
+    }
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
     .footer-content {
         flex-direction: column;
         gap: 10px;
     }
-
     .product-grid {
         grid-template-columns: 1fr;
     }
-
     .product-info-modern h1 {
         font-size: 2rem;
     }
@@ -309,7 +311,6 @@ nav a:hover::after {
         align-items: flex-end;
         gap: 10px;
     }
-
     nav a {
         margin-left: 0;
         font-size: 1rem;
